@@ -1,1 +1,7 @@
-<p>list works!</p>
+<section>
+  @for (brewery of breweryList; track $index) {
+    <div>
+      {{brewery.name}}
+    </div>
+  }
+</section>

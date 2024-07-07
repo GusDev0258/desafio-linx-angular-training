@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { ListComponent } from '../../components/list/list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent{
 
 }
