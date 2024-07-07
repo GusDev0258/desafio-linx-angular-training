@@ -1,0 +1,23 @@
+.brewery {
+  &__header {
+    width: 90%;
+    height: 70px;
+    background-color: #333;
+    color: #fafafa;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+  }
+  &__container {
+    margin-left: 6rem;
+  }
+  &__title {
+    font-size: 32px;
+  }
+  &__headline {
+    font-size: 20px;
+  }
+}
