@@ -1,9 +1,8 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { BreweryService } from '../services/brewery.service';
 import { BreweryInterface } from '../interfaces/brewery-response.interface';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
