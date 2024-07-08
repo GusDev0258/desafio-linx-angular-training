@@ -5,9 +5,41 @@
     justify-content: center;
     flex-wrap: wrap;
     flex: 1;
-    gap: 0.5rem;
+    gap: 1rem;
     margin: 0 auto;
-    width: 50%;
+    margin-top: 1rem;
+    max-width: 1200px;
     height: 100%;
+  }
+  &__type { 
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #4c566a;
+    color: white;
+    &__large {
+      background-color: #40c057; 
+    }
+    
+    &__closed {
+      background-color: #fa5252; 
+    }
+
+    &__micro {
+      background-color: #38d9a9; 
+    }
+    
+    &__contract {
+      background-color: #343a40;
+    }
+    
+    &__brewpub {
+      background-color: #fcc419;
+      color: black;
+    }
+    
+    &__regional {
+      background-color: #009acd;
+    }
   }
 }
