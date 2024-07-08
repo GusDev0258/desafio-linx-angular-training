@@ -1,7 +1,11 @@
-<section>
+<section class="brewery__list">
   @for (brewery of breweryList; track $index) {
-    <div>
-      {{brewery.name}}
-    </div>
+    <app-card>
+      <h1 cardHeader>{{brewery.name}}</h1>
+      <p cardContent>{{brewery.address_1}}</p>
+      <p cardContent>{{brewery.city}} {{brewery.state}} {{brewery.phone}}</p>
+      <p cardContent>{{brewery.country}}</p>
+      <p cardFooter>{{brewery.brewery_type}}</p>
+    </app-card>
   }
 </section>

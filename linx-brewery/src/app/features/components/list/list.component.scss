@@ -1,0 +1,13 @@
+.brewery {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 0.5rem;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+  }
+}

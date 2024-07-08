@@ -1,1 +1,11 @@
-<p>card works!</p>
+<article class="card__container">
+  <div class="card__header">
+    <ng-content select="[cardHeader]"></ng-content>
+  </div>
+  <div class="card__content">
+    <ng-content select="[cardContent]"></ng-content>
+  </div>
+  <div class="card__footer">
+    <ng-content select="[cardFooter]"></ng-content>
+  </div>
+</article>
