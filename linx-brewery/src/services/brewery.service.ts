@@ -8,11 +8,12 @@ import { BreweryInterface } from '../interfaces/brewery-response.interface';
 })
 export class BreweryService {
   BASE_URL: string =  "https://api.openbrewerydb.org/v1/"
+
   constructor(
     private readonly _http: HttpClient
   ) {}
 
   getAllBreweries(): Observable<BreweryInterface[]> {
-    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries`);
+    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?page=1&per_page=20`);
   }
 }

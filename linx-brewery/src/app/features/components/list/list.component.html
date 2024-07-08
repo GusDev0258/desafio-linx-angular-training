@@ -3,7 +3,7 @@
     <app-card>
       <h1 cardHeader>{{brewery.name}}</h1>
       <p cardContent>{{brewery.address_1}}</p>
-      <p cardContent>{{brewery.city}} {{brewery.state}} {{brewery.phone}}</p>
+      <p cardContent>{{brewery.city}} {{brewery.state}} - {{brewery.phone}}</p>
       <p cardContent>{{brewery.country}}</p>
       <p [ngClass]="getClassByBreweryType(brewery.brewery_type)" cardFooter class="brewery__type">{{brewery.brewery_type}}</p>
     </app-card>

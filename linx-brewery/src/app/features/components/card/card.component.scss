@@ -6,13 +6,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0.875rem;
-    border: 2px solid #c4c4c4;
     border-radius: 6px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25);
   }
   &__header{
     font-size: 1.5rem;
-    font-size: bold;
+    font-weight: bold;
     margin-bottom: 0.5rem;
     height: 40%;
   }
@@ -23,14 +24,24 @@
     justify-content: center;
     margin-bottom: 2rem;
     height: 50%;
+    color: #434c5e;
   }
   &__footer {
-      border-top: 1px solid #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: 0.875rem;
+    &::before{
+      content: "";
+      display: block;
       width: 100%;
-      height: 10%;
+      height: 1px;
+      background-color: #e5e9f0;
+      position: absolute;
+      bottom: 3rem;
+      left: 0;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.875rem;
+    width: 100%;
+    height: 10%;
   }
 }
