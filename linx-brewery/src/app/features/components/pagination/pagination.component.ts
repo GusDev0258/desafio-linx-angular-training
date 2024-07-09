@@ -19,6 +19,7 @@ export class PaginationComponent implements AfterViewInit {
   changePage(page: number) {
     this._breweryService.getBreweriesByPage(page).subscribe((data) => {
       if(data.length > 0) {
+        this.currentPage = page;
         this.pageButtonEmitter.emit(data);
       }
       return [];
