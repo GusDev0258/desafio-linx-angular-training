@@ -3,11 +3,12 @@ import { BreweryService } from '../../../../services/brewery.service';
 import { BreweryInterface } from '../../../../interfaces/brewery-response.interface';
 import { CardComponent } from '../card/card.component';
 import { CommonModule } from '@angular/common';
+import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, CommonModule],
+  imports: [CardComponent, CommonModule, PaginationComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
@@ -20,10 +21,12 @@ constructor(private readonly _breweryService: BreweryService) {}
   BREWERY_TYPE_CONTRACT = 'contract';
   BREWERY_TYPE_BREWPUB = 'brewpub';
   BREWERY_TYPE_REGIONAL = 'regional';
+
   ngAfterViewInit(): void {
-    this._breweryService.getAllBreweries().subscribe((breweryResponse) => {
-      this.breweryList = breweryResponse;
-    });
+  }
+
+  getBreweriesFromPage(breweries: BreweryInterface[]) { 
+    this.breweryList = breweries;
   }
 
   getClassByBreweryType(breweryType: string): string {

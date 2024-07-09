@@ -1,1 +1,12 @@
-<p>pagination works!</p>
+<div>
+  <button>
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  @for (page of pages; track $index) {
+  <button (click)="changePage(page)" [ngClass]="{'active': page === currentPage}" class="pagination
+    __button">{{page}}</button>
+  }
+  <button>
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>

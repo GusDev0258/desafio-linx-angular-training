@@ -14,6 +14,10 @@ export class BreweryService {
   ) {}
 
   getAllBreweries(): Observable<BreweryInterface[]> {
-    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?page=1&per_page=20`);
+    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries`);
+  }
+
+  getBreweriesByPage(page: number) {
+    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?page=${page}&per_page=20`);
   }
 }
