@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BreweryInterface } from '../interfaces/brewery-response.interface';
+import { BreweryType } from '../app/enums/brewery-type.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +22,8 @@ export class BreweryService {
     return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?page=${page}&per_page=20`);
   }
 
-  getBreweriesByType(breweryType: string): Observable<BreweryInterface[]> {
-    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?by_type=${breweryType}&per_page=20`);
+  getBreweriesByType(breweryType: BreweryType): Observable<BreweryInterface[]> {
+    const type = breweryType.toLowerCase();
+    return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?by_type=${type}&per_page=20`);
   }
 }

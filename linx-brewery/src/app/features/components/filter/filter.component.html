@@ -2,7 +2,7 @@
   <span class="filter__label">Filter:</span>
   <select class="filter__select" (change)="emitSelectedFilter($event)">
     @for (breweryType of breweryTypes; track $index) {
-      <option class="filter__option">{{breweryType}}</option>
+      <option class="filter__option">{{breweryType | Capitalize}}</option>
     }
   </select>
 </div>

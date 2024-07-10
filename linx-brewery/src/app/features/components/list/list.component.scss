@@ -25,42 +25,46 @@
     margin-top: 0.5rem;
     background-color: #4c566a;
     color: white;
-    &__large {
-      background-color: #40c057; 
-    }
     
-    &__closed {
-      background-color: #fa5252; 
-    }
-
-    &__micro {
-      background-color: #38d9a9; 
-    }
-    
-    &__contract {
-      background-color: #343a40;
-    }
-    
-    &__brewpub {
-      background-color: #fcc419;
-      color: black;
-    }
-    
-    &__regional {
-      background-color: #009acd;
-    }
-    &__nano {
-      background-color: #F2D0A4;
-    }
-    &__planning {
-      background-color: #f783ac;
-    }
-    &__bar {
-      background-color: #DDB967;
-      color: black;
-    }
-    &__proprietor {
-      background-color: #553555;
-    }
   }
+}
+.large {
+  background-color: #40c057; 
+}
+.closed {
+  background-color: #fa5252; 
+}
+
+.micro {
+  background-color: #38d9a9; 
+}
+
+.contract {
+  background-color: #343a40;
+}
+
+.brewpub {
+  background-color: #fcc419;
+  color: black;
+}
+
+.regional {
+  background-color: #009acd;
+}
+
+.nano {
+  background-color: #F2D0A4;
+}
+
+.planning {
+  background-color: #f783ac;
+}
+
+.bar {
+  background-color: #DDB967;
+  color: black;
+}
+
+.proprietor {
+  background-color: #553555;
 }
