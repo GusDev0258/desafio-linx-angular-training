@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -14,5 +14,17 @@ export class FilterComponent {
     "Brewpub",
     "Large",
     "Closed",
+    "Nano",
+    "Planning",
+    "Bar",
+    "Contract",
+    "Proprietor",
   ]
+
+  @Output('getSelectedFilter') selectedFilter = new EventEmitter<string>();
+
+  emitSelectedFilter(event: Event) {
+    const type = (event.target as HTMLSelectElement).value;
+    this.selectedFilter.emit(type); 
+  }
 }

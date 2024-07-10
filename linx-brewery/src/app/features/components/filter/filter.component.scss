@@ -1,0 +1,12 @@
+.filter {
+  &__label {
+    font-weight: bold;
+  }
+  &__select {
+    background-color: #fff;
+    border: 1px solid #E1E1E1;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+  }
+}

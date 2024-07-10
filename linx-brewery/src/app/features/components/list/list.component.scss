@@ -1,4 +1,12 @@
 .brewery {
+  &__filter {
+    margin: 1rem auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5.3vw;
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -40,6 +48,19 @@
     
     &__regional {
       background-color: #009acd;
+    }
+    &__nano {
+      background-color: #F2D0A4;
+    }
+    &__planning {
+      background-color: #f783ac;
+    }
+    &__bar {
+      background-color: #DDB967;
+      color: black;
+    }
+    &__proprietor {
+      background-color: #553555;
     }
   }
 }

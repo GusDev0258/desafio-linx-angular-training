@@ -1,8 +1,8 @@
-<div>
-  <span>Filter:</span>
-  <select>
+<div class="filter__container">
+  <span class="filter__label">Filter:</span>
+  <select class="filter__select" (change)="emitSelectedFilter($event)">
     @for (breweryType of breweryTypes; track $index) {
-      <option>{{breweryType}}</option>
+      <option class="filter__option">{{breweryType}}</option>
     }
   </select>
 </div>

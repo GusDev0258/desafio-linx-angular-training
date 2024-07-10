@@ -1,3 +1,6 @@
+<section class="brewery__filter">
+  <app-filter (getSelectedFilter)="changeBreweryListingByFilter($event)"></app-filter>
+</section>
 <section class="brewery__list">
   @for (brewery of breweryList; track $index) {
     <app-card>

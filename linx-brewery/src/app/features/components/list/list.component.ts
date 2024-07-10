@@ -4,11 +4,12 @@ import { BreweryInterface } from '../../../../interfaces/brewery-response.interf
 import { CardComponent } from '../card/card.component';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from '../pagination/pagination.component';
+import { FilterComponent } from '../filter/filter.component';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, CommonModule, PaginationComponent],
+  imports: [CardComponent, CommonModule, PaginationComponent, FilterComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
@@ -46,5 +47,10 @@ constructor(private readonly _breweryService: BreweryService) {}
       default:
         return '';
     }
+  }
+  changeBreweryListingByFilter(breweryType: string) {
+      this._breweryService.getBreweriesByType(breweryType.toLowerCase()).subscribe((breweries) => {
+        this.breweryList = breweries;
+    });
   }
 }
