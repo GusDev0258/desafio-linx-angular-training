@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './filter.component.scss'
 })
 export class FilterComponent {
-
+  breweryTypes = [
+    "Micro",
+    "Regional",
+    "Brewpub",
+    "Large",
+    "Closed",
+  ]
 }

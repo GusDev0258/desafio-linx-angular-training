@@ -1,1 +1,8 @@
-<p>filter works!</p>
+<div>
+  <span>Filter:</span>
+  <select>
+    @for (breweryType of breweryTypes; track $index) {
+      <option>{{breweryType}}</option>
+    }
+  </select>
+</div>
