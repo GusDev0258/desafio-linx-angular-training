@@ -26,4 +26,8 @@ export class BreweryService {
     const type = breweryType.toLowerCase();
     return this._http.get<BreweryInterface[]>(`${this.BASE_URL}breweries?by_type=${type}&per_page=20`);
   }
+
+  getBreweryById(id: string): Observable<BreweryInterface> {
+    return this._http.get<BreweryInterface>(`${this.BASE_URL}breweries/${id}`);
+  }
 }

@@ -7,20 +7,18 @@ import { PaginationComponent } from '../pagination/pagination.component';
 import { FilterComponent } from '../filter/filter.component';
 import { BreweryType } from '../../../enums/brewery-type.enum';
 import { CapitalizePipe } from '../../../pipes/capitalize.pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, CommonModule, PaginationComponent, FilterComponent, CapitalizePipe],
+  imports: [CardComponent, CommonModule, PaginationComponent, FilterComponent, CapitalizePipe, RouterLink],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
-export class ListComponent implements AfterViewInit {
+export class ListComponent {
 constructor(private readonly _breweryService: BreweryService) {}
   breweryList: BreweryInterface[] = [];
-
-  ngAfterViewInit(): void {
-  }
 
   getBreweriesFromPage(breweries: BreweryInterface[]) { 
     this.breweryList = breweries;

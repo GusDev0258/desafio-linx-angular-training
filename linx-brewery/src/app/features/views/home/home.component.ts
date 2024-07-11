@@ -9,5 +9,4 @@ import { ListComponent } from '../../components/list/list.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent{
-
 }

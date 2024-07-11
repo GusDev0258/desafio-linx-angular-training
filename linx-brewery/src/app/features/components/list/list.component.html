@@ -3,7 +3,7 @@
 </section>
 <section class="brewery__list">
   @for (brewery of breweryList; track $index) {
-    <app-card>
+    <app-card routerLink="details/{{brewery.id}}">
       <h1 cardHeader>{{brewery.name}}</h1>
       <p cardContent>{{brewery.address_1}}</p>
       <p cardContent>{{brewery.city}} {{brewery.state}} - {{brewery.phone}}</p>

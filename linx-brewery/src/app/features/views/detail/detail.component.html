@@ -1,0 +1,34 @@
+<section class="detail__container">
+  <div class="detail__back" routerLink="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail__arrow">
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg> 
+    <span>
+      Back
+    </span>
+  </div>
+
+  @if (brewery) {
+    <h1 class="detail__title">{{brewery?.name}}</h1>
+      <ul class="detail__list">
+        <li>Type: {{brewery?.brewery_type}}</li>
+        <li>Street: {{brewery?.street}}</li>
+        <li>City: {{brewery?.city}}</li>
+        <li>State: {{brewery?.state}}</li>
+        <li>Postal Code: {{brewery?.postal_code}}</li>
+        <li>Country: {{brewery?.country}}</li>
+        <li>Website: <a href={{brewery?.website_url}} target="_blank">{{brewery?.website_url}}</a></li>
+        <li>Phone: {{brewery?.phone}}</li>
+        @if(brewery?.latitude && brewery?.longitude){
+          <li>Open in Maps: 
+            <a [href]="getGoogleMapsLink(brewery?.latitude, brewery?.longitude)" target="_blank"> {{brewery?.latitude + "," + brewery?.longitude}}
+            </a>
+          </li>
+        } @else {
+          <li>Open in Maps: No coordinates available</li>
+        }
+      </ul>
+  }
+  @else {
+    <h1 class="detail__title">No brewery found</h1>
+  }
+</section>
