@@ -68,3 +68,11 @@
 .proprietor {
   background-color: #553555;
 }
+
+@media (max-width: 768px) {
+  .brewery {
+    &__list {
+      width: 98vw;
+    }
+  }
+}

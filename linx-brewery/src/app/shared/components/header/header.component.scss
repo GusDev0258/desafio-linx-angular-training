@@ -10,14 +10,23 @@
     align-items: start;
     justify-content: start;
     flex-direction: column;
+    @media (max-width: 768px) {
+      width: 75%;
+    }
   }
   &__container {
     margin-left: 6rem;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
   }
   &__title {
     font-size: 32px;
   }
   &__headline {
     font-size: 20px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 }

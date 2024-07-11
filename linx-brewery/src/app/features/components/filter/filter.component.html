@@ -1,6 +1,6 @@
 <div class="filter__container">
-  <span class="filter__label">Filter:</span>
-  <select class="filter__select" (change)="emitSelectedFilter($event)">
+  <label class="filter__label" for="filter">Filter:</label>
+  <select class="filter__select" (change)="emitSelectedFilter($event)" id="filter">
     @for (breweryType of breweryTypes; track $index) {
       <option class="filter__option">{{breweryType | Capitalize}}</option>
     }
